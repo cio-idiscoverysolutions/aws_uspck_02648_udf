@@ -194,6 +194,21 @@ view: udf_udf {
     sql: ${TABLE}.VERSION_STATUS ;;
   }
 
+  dimension: dateMonth {
+    type: number
+    sql: DATEPART(Month,${TABLE}.date_beg_lcl) ;;
+  }
+
+  dimension: dayDay {
+    type: number
+    sql: DATEPART(Weekday,${TABLE}.date_beg_lcl) ;;
+  }
+
+  dimension: dayHour {
+    type: number
+    sql: DATEPART(Hour,${TABLE}.date_beg_lcl) ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [udf_id]
