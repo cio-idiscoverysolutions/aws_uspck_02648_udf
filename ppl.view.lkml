@@ -1,4 +1,4 @@
-view: ppl {
+view: dim_ppl {
   sql_table_name: dim.PPL ;;
 
   dimension: ppl_id {

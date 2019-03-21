@@ -10,7 +10,15 @@ datagroup: aws_uspck_02648_default_datagroup {
 
 persist_with: aws_uspck_02648_default_datagroup
 
-explore: ppl {}
+explore: dim_ppl {}
+
+explore: udf_udf {
+  join: dim_ppl {
+    type: inner
+    relationship: many_to_one
+    sql_on: ${udf_udf.ppl_id} = ${dim_ppl.ppl_id} ;;
+  }
+}
 
 # - explore: evt
 
