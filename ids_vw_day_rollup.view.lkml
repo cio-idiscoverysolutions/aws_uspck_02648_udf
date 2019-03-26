@@ -73,7 +73,7 @@ view: ids_vw_day_rollup {
     type: count
     drill_fields: [driver_name]
   }
-  measure: sum_hours {
+  measure: sum {
     type: sum
     drill_fields: [duration_hours]
   }
