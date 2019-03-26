@@ -12,6 +12,9 @@ persist_with: aws_uspck_02648_default_datagroup
 
 explore: dim_ppl {}
 
+explore: ids_vw_day_rollup {}
+
+explore: ids_vw_day_rollup_driving {}
 explore: udf_udf {
   join: dim_ppl {
     type: inner
